@@ -1,7 +1,3 @@
-html, body {
-  min-height: 100vh;
-}
-
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
@@ -26,18 +22,115 @@ html, body {
   color: white;
 }
 
+.hero-text h1{
+  font-size: 100px;
+}
+
+.hero-text p{
+  font-size: 25px;
+}
+
 .about {
   width: 100%;
   background-color: black;
+  display: flex;
   text-align: center;
-  position: absolute;
+  position: static;
+  top: 50%;
+  color: white;
+  justify-content: center;
+}
+
+
+.footer {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  text-align: center;
+  position: static;
+  top: 50%;
+  color: white;
+  justify-content: center;
+}
+
+.info {
+  display: block;
+  width: 100%;
+  background-color: darkblue;
+  text-align: center;
+  position: static;
   top: 50%;
   color: white;
 }
 
-.card {
+.about .card {
   position: relative;
   display: inline-block;
-  margin: 35px;
-  width: 25%;
+  width: 33%;
+  padding: 25px;
+}
+
+.about .card p{
+  font-size: 25px;
+}
+
+.info .panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.info .img {
+  display: inline-block;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+
+}
+
+.info .card {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  margin: 20px;
+}
+
+.info .card h1{
+  font-size: 50px;
+}
+.info .card p{
+  font-size: 30px;
+}
+
+.menu {
+
+  width: 100%;
+  background-color: black;
+  display: inline-block;
+  text-align: center;
+  position: static;
+  top: 50%;
+  color: white;
+}
+
+.menu-items-container {
+  font-size: 0px;
+}
+
+.menu-item {
+  display: inline-block;
+  width: 50%;
+  height: 700px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px;
+}
+
+.menu-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0px;
+  padding: 0px;
 }
