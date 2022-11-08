@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import logo from './assets/caribbean-logo.png';
+import blackwhitelogo from './assets/black-white-logo.png'
 import cookingIcon from './assets/img/icons/cooking-icon.png';
 import cocktailIcon from './assets/img/icons/cocktail-icon.png';
 import drink from './assets/img/info-1.jpg';
@@ -19,6 +20,47 @@ function importAll(r) {
 }
 
 const images = importAll(require.context('./assets/img/Menu', false, /\.(png|jpe?g|svg)$/));
+
+function MenuBar() {
+  return(
+    <>
+      <div className="menu-bar-image">
+        <img src={blackwhitelogo} />
+      </div>
+      <div className="menu-bar">
+        <MenuBarButton name="Menu"/>
+        <MenuBarButton name="About"/>
+        <MenuBarButton name="Info"/>
+        <MenuBarButton name="Events"/>
+        <MenuBarButton name="Contact Us"/>
+        <MenuBarButton name="Reviews"/>
+      </div>
+    </>
+  );
+}
+
+function MenuBarButton({name}) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const color = isHovered ? 
+    { color: 'black', backgroundColor: 'white', transition: 'background-color 1s linear' } 
+      : { color: 'white' };
+
+  const domElement = document.getElementById(`${name}`);
+
+  function scroll() {
+    domElement.scrollIntoView(({ behavior: 'smooth' }));
+  }
+
+  return(
+    <div className="menu-bar-button" 
+         onClick={scroll}
+         onMouseEnter={() => setIsHovered(true)}
+         onMouseLeave={() => setIsHovered(false)} >
+        <h1 style={color}>{name}</h1>
+    </div>
+  );
+}
 
 function Header() {
   return (
@@ -55,7 +97,7 @@ function About() {
 
   return (
     <>
-      <div className="about">
+      <div id="About" className="about">
         <h1>How We Caribbean</h1>
       </div>
       <div className="about">
@@ -91,7 +133,7 @@ function Info() {
 
 
   return (
-    <div className="info">
+    <div id="Info" className="info">
       <div className="panel" style={{backgroundColor: 'darkblue'}}>
         <img src={content[0].img} />
         <div className="wrapper">
@@ -99,7 +141,7 @@ function Info() {
                 description={content[0].description}/>
         </div>
       </div>
-      <div className="panel" style={{backgroundColor: 'darkorange'}}>
+      <div id="Events" className="panel" style={{backgroundColor: 'darkorange'}}>
         <div className="wrapper">
           <Card title={content[1].title}
                 description={content[1].description}/>
@@ -121,7 +163,6 @@ function Card({img, title, description}) {
 }
 
 function Menu() {
-
   const menu = [
    'blistek',
    'cubano',
@@ -136,7 +177,7 @@ function Menu() {
     <>
     <div className="menu">
       <img src={cookingIcon} />
-      <h1>Menu</h1>
+      <h1 id="Menu">Menu</h1>
     </div>
     <div className="menu-items-container">
       {menu.map(item => (
@@ -164,9 +205,9 @@ function Image({image, name}) {
 
 function Footer() {
   return (
-    <div className="footer">
+    <div id="Contact Us" className="footer">
       <h1>Let's Get Social</h1>
-      <div className="maps-panel">
+      <div id="Reviews" className="maps-panel">
         <GoogleMaps />
         <div className="maps-address">
           <h1>Our Info</h1>
@@ -206,8 +247,11 @@ function GoogleMaps() {
 
 
 function App() {
+
+  
   return (
     <div className="App">
+      <MenuBar />
       <Header  />
       <About />
       <Info />
