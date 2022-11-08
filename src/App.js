@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import logo from './assets/caribbean-logo.png';
 import cookingIcon from './assets/img/icons/cooking-icon.png';
 import cocktailIcon from './assets/img/icons/cocktail-icon.png';
@@ -25,7 +26,7 @@ function Header() {
       <div className="hero-text">
         <img src={logo} />
         <h1>The Caribbean</h1>
-        <p>On Lake George</p>
+        <h2>On Lake George</h2>
       </div>
     </div>
   );
@@ -91,14 +92,18 @@ function Info() {
 
   return (
     <div className="info">
-      <div className="panel">
+      <div className="panel" style={{backgroundColor: 'darkblue'}}>
         <img src={content[0].img} />
-        <Card title={content[0].title}
-              description={content[0].description}/>
+        <div className="wrapper">
+          <Card title={content[0].title}
+                description={content[0].description}/>
+        </div>
       </div>
-      <div className="panel">
-        <Card title={content[1].title}
-              description={content[1].description}/>
+      <div className="panel" style={{backgroundColor: 'darkorange'}}>
+        <div className="wrapper">
+          <Card title={content[1].title}
+                description={content[1].description}/>
+        </div>
         <img src={content[1].img} />
       </div>
     </div>
@@ -118,14 +123,14 @@ function Card({img, title, description}) {
 function Menu() {
 
   const menu = [
-   'blistek.jpg',
-   'cubano.jpg',
-   'jibarito.jpg',
-   'lechon.jpg',
-   'pastelillos.jpg',
-   'polloguisado.jpg',
-   'porkchops.jpg',
-   'tostones.jpg'];
+   'blistek',
+   'cubano',
+   'jibarito',
+   'lechon',
+   'pastelillos',
+   'polloguisado',
+   'porkchops',
+   'tostones'];
 
   return(
     <>
@@ -135,12 +140,25 @@ function Menu() {
     </div>
     <div className="menu-items-container">
       {menu.map(item => (
-        <div className="menu-item">
-         <img src={images[item]} />
-        </div>
+        <Image image={images[`${item}.jpg`]} name={item} />
       ))}
     </div>
     </>
+  );
+}
+
+function Image({image, name}) {
+  const [isHovered, setIsHovered] = useState(false);
+
+
+  return (
+    <div className="menu-item" 
+         onMouseEnter={() => setIsHovered(true)}
+         onMouseLeave={() => setIsHovered(false)} >
+
+    {isHovered && (<div className="menu-item-hover" visible={isHovered}><h1>{name} </h1></div>)}
+       <img src={image} />
+    </div>
   );
 }
 

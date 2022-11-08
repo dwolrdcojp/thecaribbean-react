@@ -53,15 +53,6 @@
   justify-content: center;
 }
 
-.info {
-  display: block;
-  width: 100%;
-  background-color: darkblue;
-  text-align: center;
-  position: static;
-  top: 50%;
-  color: white;
-}
 
 .about .card {
   position: relative;
@@ -74,6 +65,16 @@
   font-size: 25px;
 }
 
+.info {
+  display: block;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  position: static;
+  top: 50%;
+  color: white;
+}
+
 .info .panel {
   display: flex;
   align-items: center;
@@ -82,6 +83,7 @@
   height: 600px;
 }
 
+
 .info img{
   display: inline-block;
   width: 50%;
@@ -89,18 +91,31 @@
   object-fit: cover;
 }
 
-.info .card{
+.info .panel .wrapper{
   display: inline-block;
   width: 50%;
-  text-align: center;
-  margin: 10px;
+  height: 100%;
 }
+
+.info .card{
+  display: inline-block;
+  width: 80%;
+  height: 100%;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.info .card img{
+  width: 0px;
+  height: 0px;
+}
+
 
 .info .card h1{
   font-size: 3vw;
 }
 .info .card p{
-  font-size: 2vw;
+  font-size: 30px;
 }
 
 .menu {
@@ -119,12 +134,22 @@
 }
 
 .menu-item {
+  position: relative;
   display: inline-block;
   width: 50%;
   height: 700px;
   margin: 0px;
   padding: 0px;
-  font-size: 0px;
+}
+
+.menu-item-hover {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .menu-item img{
@@ -133,6 +158,7 @@
   object-fit: cover;
   margin: 0px;
   padding: 0px;
+  font-size: 0px;
 }
 
 .footer {
