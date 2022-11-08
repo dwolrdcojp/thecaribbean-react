@@ -170,15 +170,11 @@ function Footer() {
         <GoogleMaps />
         <div className="maps-address">
           <h1>Our Info</h1>
-          <ul>
             <li>438 E 4th St, Hobart, IN 46342</li>
             <li>(219) 940-3232</li>
-          </ul>
           <h1>Our Hours</h1>
-          <ul>
             <li>Sunday - Wednesday: Closed</li>
             <li>Thursday - Saturday: 5:00 - 9:00 PM</li>
-          </ul>
         </div>
       </div>
       <div className="footer-icons">
@@ -195,7 +191,7 @@ function Footer() {
           <img src={phoneIcon} />
         </a>
       </div>
-      <h2>Copyright © 2022 - The Caribbean</h2>
+      <h3>Copyright © 2022 - The Caribbean</h3>
     </div>
   );
 }
