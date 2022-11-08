@@ -4,6 +4,11 @@ import cookingIcon from './assets/img/icons/cooking-icon.png';
 import cocktailIcon from './assets/img/icons/cocktail-icon.png';
 import drink from './assets/img/info-1.jpg';
 import dish from './assets/img/info-2.jpg';
+import facebookIcon from './assets/img/icons/facebook_icon.svg';
+import instagramIcon from './assets/img/icons/instagram_icon.svg';
+import emailIcon from './assets/img/icons/email_icon.svg';
+import phoneIcon from './assets/img/icons/phone_icon.svg';
+
 
 
 function importAll(r) {
@@ -87,14 +92,14 @@ function Info() {
   return (
     <div className="info">
       <div className="panel">
-        <img className="img" src={content[0].img} />
+        <img src={content[0].img} />
         <Card title={content[0].title}
               description={content[0].description}/>
       </div>
       <div className="panel">
         <Card title={content[1].title}
               description={content[1].description}/>
-        <img className="img" src={content[1].img} />
+        <img src={content[1].img} />
       </div>
     </div>
   );
@@ -142,7 +147,45 @@ function Menu() {
 function Footer() {
   return (
     <div className="footer">
-      <h1>Footer</h1>
+      <h1>Let's Get Social</h1>
+      <div className="maps-panel">
+        <GoogleMaps />
+        <div className="maps-address">
+          <h1>Our Info</h1>
+          <ul>
+            <li>438 E 4th St, Hobart, IN 46342</li>
+            <li>(219) 940-3232</li>
+          </ul>
+          <h1>Our Hours</h1>
+          <ul>
+            <li>Sunday - Wednesday: Closed</li>
+            <li>Thursday - Saturday: 5:00 - 9:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div className="footer-icons">
+        <a href="https://www.facebook.com/search/top/?q=the%20caribbean%20on%20lake%20george">
+          <img src={facebookIcon} />
+        </a>
+        <a href="https://www.instagram.com">
+          <img src={instagramIcon} />
+        </a>
+        <a href="mailto: thecaribbean2125@gmail.com">
+          <img src={emailIcon} />
+        </a>
+        <a href="tel:2199403232">
+          <img src={phoneIcon} />
+        </a>
+      </div>
+      <h2>Copyright © 2022 - The Caribbean</h2>
+    </div>
+  );
+}
+
+function GoogleMaps() {
+  return(
+      <div className="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.7669760884737!2d-87.25701614814238!3d41.53098797914934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8811eb0a658ed307%3A0x226fc933a0acabfe!2sThe%20Caribbean%20on%20Lake%20George!5e0!3m2!1sen!2sus!4v1667916994141!5m2!1sen!2sus"  style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   );
 }

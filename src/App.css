@@ -79,28 +79,28 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 600px;
 }
 
-.info .img {
+.info img{
   display: inline-block;
   width: 50%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-
 }
 
-.info .card {
+.info .card{
   display: inline-block;
   width: 50%;
   text-align: center;
-  margin: 20px;
+  margin: 10px;
 }
 
 .info .card h1{
-  font-size: 50px;
+  font-size: 3vw;
 }
 .info .card p{
-  font-size: 30px;
+  font-size: 2vw;
 }
 
 .menu {
@@ -133,4 +133,62 @@
   object-fit: cover;
   margin: 0px;
   padding: 0px;
+}
+
+.footer {
+  justify-content: center;
+  display: inline-block;
+}
+
+.footer .maps-panel{
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+
+.footer .maps{
+  width: 50%;
+}
+
+.footer .maps iframe{
+  height: 100%;
+  width: 100%;
+}
+
+.footer .maps-address{
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+}
+
+.footer .maps-address h1{
+  font-size: 50px;
+}
+
+.footer .maps-address ul{
+  list-style: none;
+  font-size: 25px;
+}
+
+.footer .maps-address li{
+  list-style: none;
+  margin: auto;
+}
+
+
+.footer-icons {
+  font-size: 0px;
+  width: 40%;
+  height: auto;
+  display: inline-block;
+  padding: 20px;
+  justify-content: center;
+}
+
+.footer-icons img{
+  font-size: 0px;
+  width: 20%;
+  padding: 5px;
 }
