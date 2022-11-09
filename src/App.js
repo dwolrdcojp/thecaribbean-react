@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import logo from './assets/caribbean-logo.png';
 import blackwhitelogo from './assets/black-white-logo.png'
 import cookingIcon from './assets/img/icons/cooking-icon.png';
@@ -10,6 +10,7 @@ import facebookIcon from './assets/img/icons/facebook_icon.svg';
 import instagramIcon from './assets/img/icons/instagram_icon.svg';
 import emailIcon from './assets/img/icons/email_icon.svg';
 import phoneIcon from './assets/img/icons/phone_icon.svg';
+import heroImage from './assets/img/hero-background.jpg';
 
 
 
@@ -63,8 +64,16 @@ function MenuBarButton({name}) {
 }
 
 function Header() {
+  const heroRef = useRef();
+  useEffect(() => {
+    heroRef.current.animate({opacity: [0, 0, 1]}, 2000);
+  }, []);
+
   return (
-    <div className="hero-image">
+    <div className="hero">
+      <div ref={heroRef} className="hero-image">
+        <img src={heroImage} />
+      </div>
       <div className="hero-text">
         <img src={logo} />
         <h1>The Caribbean</h1>
@@ -176,8 +185,8 @@ function Menu() {
   return(
     <>
     <div className="menu">
-      <img src={cookingIcon} />
-      <h1 id="Menu">Menu</h1>
+      <img id="Menu" src={cookingIcon} />
+      <h1>Menu</h1>
     </div>
     <div className="menu-items-container">
       {menu.map(item => (
