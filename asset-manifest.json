@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/thecaribbean-react/static/css/main.073a6cfc.css",
+    "main.css": "/thecaribbean-react/static/css/main.23d5cd00.css",
     "main.js": "/thecaribbean-react/static/js/main.3d870e81.js",
     "static/js/787.65102842.chunk.js": "/thecaribbean-react/static/js/787.65102842.chunk.js",
     "static/media/porkchops.jpg": "/thecaribbean-react/static/media/porkchops.bb69fef3b4c8307f8f7e.jpg",
@@ -22,12 +22,12 @@
     "static/media/facebook_icon.svg": "/thecaribbean-react/static/media/facebook_icon.27cdc27acd49f385f3b6ea70c5511fde.svg",
     "index.html": "/thecaribbean-react/index.html",
     "static/media/email_icon.svg": "/thecaribbean-react/static/media/email_icon.24c6b863a29f0cc3ab3646948deebd31.svg",
-    "main.073a6cfc.css.map": "/thecaribbean-react/static/css/main.073a6cfc.css.map",
+    "main.23d5cd00.css.map": "/thecaribbean-react/static/css/main.23d5cd00.css.map",
     "main.3d870e81.js.map": "/thecaribbean-react/static/js/main.3d870e81.js.map",
     "787.65102842.chunk.js.map": "/thecaribbean-react/static/js/787.65102842.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073a6cfc.css",
+    "static/css/main.23d5cd00.css",
     "static/js/main.3d870e81.js"
   ]
 }
