@@ -140,11 +140,10 @@ function Info() {
     }
   ];
 
-
   return (
     <div id="Info" className="info">
       <div className="panel" style={{backgroundColor: 'darkblue'}}>
-        <img src={content[0].img} />
+        <img id='panelId' src={content[0].img} />
         <div className="wrapper">
           <Card title={content[0].title}
                 description={content[0].description}/>
