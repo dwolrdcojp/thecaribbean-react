@@ -162,23 +162,23 @@ function Info() {
 
 function Card({img, title, description}) {
   return (
-    <div className="card">
+    <span className="card">
       <img src={img} />
       <h1>{title}</h1>
       <p>{description}</p>
-    </div>
+    </span>
   );
 }
 
 function Menu() {
   const menu = [
-   'blistek',
+   'bistec',
    'cubano',
    'jibarito',
    'lechon',
    'pastelillos',
-   'polloguisado',
-   'porkchops',
+   'pollo guisado',
+   'pork chops',
    'tostones'];
 
   return(

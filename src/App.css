@@ -49,7 +49,7 @@
 /* The hero image */
 .hero {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  height: 50vh;
+  height: 93vh;
   background-color: black;
   background-position: center;
   background-repeat: no-repeat;
@@ -287,6 +287,11 @@
 @media (max-width: 575.98px) {  
 
 .App {
+  margin: 0px;
+}
+
+.body {
+  margin: 0px;
 }
 
 .menu-bar {
@@ -420,13 +425,15 @@
   text-align: center;
   color: white;
   font-size: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .info .panel {
   display: inline-block;
   align-items: center;
   width: 100%;
-  height: 422px;
+  height: 660px;
   margin: 0px;
   padding: 0px;
   font-size: 0px;
@@ -440,33 +447,38 @@
   object-fit: cover;
   margin: 0px;
   padding: 0px;
-  font-size: 0px;
 }
 
 .info .panel .wrapper{
   display: inline-block;
   width: 90%;
   height: 50%;
+  font-size: 90px;
   margin: 0px;
-  padding: 0px;
 }
 
 .info .card{
-  display: inline-block;
+  display: inline;
   width: 100%;
   height: 100%;
   overflow: hidden;
   margin: 0px;
   padding: 0px;
+  vertical-align: middle;
+  font-size: 0px;
 }
 
 .info .card img{
   display: none;
+  font-size: 0px;
+  padding: 0px;
 }
 
 
 .info .card h1{
+  display: inline-block;
   font-size: 6vw;
+  margin: 0px;
 }
 
 .info .card p{
@@ -474,18 +486,15 @@
 }
 
 .menu {
-
-  width: 100%;
-  background-color: black;
-  display: inline-block;
-  text-align: center;
-  position: static;
-  top: 50%;
-  color: white;
+  position: inline-block;
+  margin: 0px;
+  
 }
 
 .menu-items-container {
   font-size: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .menu-item {
@@ -571,4 +580,3 @@
 }
 
 }
-
