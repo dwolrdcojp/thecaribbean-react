@@ -4,6 +4,7 @@ import logo from './assets/caribbean-logo.png';
 import blackwhitelogo from './assets/black-white-logo.png'
 import cookingIcon from './assets/img/icons/cooking-icon.png';
 import cocktailIcon from './assets/img/icons/cocktail-icon.png';
+import vinylIcon from './assets/img/icons/vinyl-record.png';
 import drink from './assets/img/info-1.jpg';
 import dish from './assets/img/info-2.jpg';
 import facebookIcon from './assets/img/icons/facebook_icon.svg';
@@ -73,11 +74,11 @@ function Header() {
     <div className="hero">
       <div ref={heroRef} className="hero-image">
         <img src={heroImage} />
-      </div>
-      <div className="hero-text">
-        <img src={logo} />
-        <h1>The Caribbean</h1>
-        <h2>On Lake George</h2>
+								<div className="hero-text">
+												<img src={logo} />
+												<h1>The Caribbean</h1>
+												<h2>On Lake George</h2>
+								</div>
       </div>
     </div>
   );
@@ -93,9 +94,9 @@ function About() {
     },
     {
       id: 1,
-      img: cookingIcon,
+      img: vinylIcon,
       title: "Feel Our Latin Vibe",
-      description: "Live salsa, bachata, merengue, and other music that will bring you to the caribbean. Bring your friends and enjoy the experience!",
+      description: "Salsa, bachata, merengue, and other music that will bring you to the caribbean. Bring your friends and enjoy the experience!",
     },
     {
       id: 2,
@@ -136,20 +137,20 @@ function Info() {
       id: 1,
       img: dish,
       title: "Private Events!",
-      description: "The Caribbean is available for private meetings and events from 1:00pm to 4:00pm from Tuesday through Friday. We also offer catering options. Call (219) 940-3232 for questions or to discuss details."
+      description: "The Caribbean is available for private meetings and events from 1:00pm to 4:00pm from Sunday through Wednesday. We also offer catering options. Call 219-940-3232 for questions or to discuss details."
     }
   ];
 
   return (
     <div id="Info" className="info">
-      <div className="panel" style={{backgroundColor: 'darkblue'}}>
+      <div className="panel" style={{backgroundColor: '#42b6f5'}}>
         <img id='panelId' src={content[0].img} />
         <div className="wrapper">
           <Card title={content[0].title}
                 description={content[0].description}/>
         </div>
       </div>
-      <div id="Events" className="panel" style={{backgroundColor: 'darkorange'}}>
+      <div id="Events" className="panel" style={{backgroundColor: '#f5a442'}}>
         <div className="wrapper">
           <Card title={content[1].title}
                 description={content[1].description}/>
