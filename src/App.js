@@ -12,12 +12,13 @@ import instagramIcon from './assets/img/icons/instagram_icon.svg';
 import emailIcon from './assets/img/icons/email_icon.svg';
 import phoneIcon from './assets/img/icons/phone_icon.svg';
 import heroImage from './assets/img/hero-background.jpg';
-
-
+import drinkMenu from './assets/drinks.pdf';
+import foodMenu from './assets/foodmenu.pdf';
+import togoMenu from './assets/togomenu.pdf';
 
 function importAll(r) {
 	let images = {};
-  r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
+  r.keys().forEach((item) => { images[item.replace('./', '')] = r(item); });
 	return images
 }
 
@@ -27,17 +28,38 @@ function MenuBar() {
   return(
     <>
       <div className="menu-bar-image">
-        <img src={blackwhitelogo} />
+        <img src={blackwhitelogo} alt="the caribbean logo" />
       </div>
       <div className="menu-bar">
-        <MenuBarButton name="Menu"/>
-        <MenuBarButton name="About"/>
-        <MenuBarButton name="Info"/>
+        <MenuBarLink name="Drinks" menu={drinkMenu} />
+        <MenuBarLink name="Menu" menu={foodMenu} />
+        <MenuBarLink name="To-Go" menu={togoMenu} />
         <MenuBarButton name="Events"/>
         <MenuBarButton name="Contact Us"/>
         <MenuBarButton name="Reviews"/>
       </div>
     </>
+  );
+}
+
+function MenuBarLink({ name, menu }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const color = isHovered ? 
+    { color: 'black', backgroundColor: 'white', transition: 'background-color 1s linear' } 
+      : { color: 'white' };
+
+  function handleClick() {
+    window.open(menu);
+  }
+
+  return(
+    <div className="menu-bar-button" 
+         onClick={handleClick}
+         onMouseEnter={() => setIsHovered(true)}
+         onMouseLeave={() => setIsHovered(false)} >
+        <h1 style={color}>{name}</h1>
+    </div>
   );
 }
 
@@ -73,9 +95,9 @@ function Header() {
   return (
     <div className="hero">
       <div ref={heroRef} className="hero-image">
-        <img src={heroImage} />
+        <img src={heroImage} alt="hero" />
 								<div className="hero-text">
-												<img src={logo} />
+												<img src={logo} alt="logo" />
 												<h1>The Caribbean</h1>
 												<h2>On Lake George</h2>
 								</div>
@@ -144,7 +166,7 @@ function Info() {
   return (
     <div id="Info" className="info">
       <div className="panel" style={{backgroundColor: '#42b6f5'}}>
-        <img id='panelId' src={content[0].img} />
+        <img id='panelId' src={content[0].img} alt="content info" />
         <div className="wrapper">
           <Card title={content[0].title}
                 description={content[0].description}/>
@@ -155,7 +177,7 @@ function Info() {
           <Card title={content[1].title}
                 description={content[1].description}/>
         </div>
-        <img src={content[1].img} />
+        <img src={content[1].img} alt="content info" />
       </div>
     </div>
   );
@@ -164,7 +186,7 @@ function Info() {
 function Card({img, title, description}) {
   return (
     <span className="card">
-      <img src={img} />
+      <img src={img} alt="card info" />
       <h1>{title}</h1>
       <p>{description}</p>
     </span>
@@ -185,7 +207,7 @@ function Menu() {
   return(
     <>
     <div className="menu">
-      <img id="Menu" src={cookingIcon} />
+      <img id="Menu" src={cookingIcon} alt="cooking" />
       <h1>Menu</h1>
     </div>
     <div className="menu-items-container">
@@ -207,7 +229,7 @@ function Image({image, name}) {
          onMouseLeave={() => setIsHovered(false)} >
 
     {isHovered && (<div className="menu-item-hover" visible={isHovered}><h1>{name} </h1></div>)}
-       <img src={image} />
+       <img src={image} alt="food" />
     </div>
   );
 }
@@ -229,16 +251,16 @@ function Footer() {
       </div>
       <div className="footer-icons">
         <a href="https://www.facebook.com/search/top/?q=the%20caribbean%20on%20lake%20george">
-          <img src={facebookIcon} />
+          <img src={facebookIcon} alt="facebook" />
         </a>
         <a href="https://www.instagram.com">
-          <img src={instagramIcon} />
+          <img src={instagramIcon} alt="instagram" />
         </a>
         <a href="mailto: thecaribbean2125@gmail.com">
-          <img src={emailIcon} />
+          <img src={emailIcon} alt="email" />
         </a>
         <a href="tel:2199403232">
-          <img src={phoneIcon} />
+          <img src={phoneIcon} alt="phone" />
         </a>
       </div>
       <h3>Copyright © 2022 - The Caribbean</h3>
@@ -249,7 +271,7 @@ function Footer() {
 function GoogleMaps() {
   return(
       <div className="maps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.7669760884737!2d-87.25701614814238!3d41.53098797914934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8811eb0a658ed307%3A0x226fc933a0acabfe!2sThe%20Caribbean%20on%20Lake%20George!5e0!3m2!1sen!2sus!4v1667916994141!5m2!1sen!2sus"  style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="google maps caribbean" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2986.7669760884737!2d-87.25701614814238!3d41.53098797914934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8811eb0a658ed307%3A0x226fc933a0acabfe!2sThe%20Caribbean%20on%20Lake%20George!5e0!3m2!1sen!2sus!4v1667916994141!5m2!1sen!2sus"  style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   );
 }
