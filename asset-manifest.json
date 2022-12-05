@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.375970cc.css",
-    "main.js": "/static/js/main.293923e5.js",
+    "main.js": "/static/js/main.64e684c6.js",
     "static/js/787.65102842.chunk.js": "/static/js/787.65102842.chunk.js",
     "static/media/pork chops.jpg": "/static/media/pork chops.bb69fef3b4c8307f8f7e.jpg",
     "static/media/lechon.jpg": "/static/media/lechon.d9f8f78217be97e496d3.jpg",
@@ -14,7 +14,10 @@
     "static/media/alcapurria.jpg": "/static/media/alcapurria.ff82ef82b768e3472f72.jpg",
     "static/media/hero-background.jpg": "/static/media/hero-background.56af2dfd4fcca972b017.jpg",
     "static/media/info-2.jpg": "/static/media/info-2.55fa9844b91587278763.jpg",
+    "static/media/foodmenu.pdf": "/static/media/foodmenu.d612cdf72ec4aeb2a5c8.pdf",
+    "static/media/togomenu.pdf": "/static/media/togomenu.173d0ad84348ea82113a.pdf",
     "static/media/info-1.jpg": "/static/media/info-1.bae5532bc814d884e181.jpg",
+    "static/media/drinks.pdf": "/static/media/drinks.9098efbaa3c7665a62a5.pdf",
     "static/media/caribbean-logo.png": "/static/media/caribbean-logo.37497c6a355746779046.png",
     "static/media/instagram_icon.svg": "/static/media/instagram_icon.c41215df9eac1630e91d4e591bc25e72.svg",
     "static/media/black-white-logo.png": "/static/media/black-white-logo.f378fb3062ea92f22156.png",
@@ -23,11 +26,11 @@
     "static/media/email_icon.svg": "/static/media/email_icon.24c6b863a29f0cc3ab3646948deebd31.svg",
     "index.html": "/index.html",
     "main.375970cc.css.map": "/static/css/main.375970cc.css.map",
-    "main.293923e5.js.map": "/static/js/main.293923e5.js.map",
+    "main.64e684c6.js.map": "/static/js/main.64e684c6.js.map",
     "787.65102842.chunk.js.map": "/static/js/787.65102842.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.375970cc.css",
-    "static/js/main.293923e5.js"
+    "static/js/main.64e684c6.js"
   ]
 }
