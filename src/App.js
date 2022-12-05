@@ -166,7 +166,7 @@ function Info() {
   return (
     <div id="Info" className="info">
       <div className="panel" style={{backgroundColor: '#42b6f5'}}>
-        <img id='panelId' src={content[0].img} alt="content info" />
+        <img id='panelId' src={content[0].img} />
         <div className="wrapper">
           <Card title={content[0].title}
                 description={content[0].description}/>
@@ -177,7 +177,7 @@ function Info() {
           <Card title={content[1].title}
                 description={content[1].description}/>
         </div>
-        <img src={content[1].img} alt="content info" />
+        <img src={content[1].img} />
       </div>
     </div>
   );
@@ -186,7 +186,7 @@ function Info() {
 function Card({img, title, description}) {
   return (
     <span className="card">
-      <img src={img} alt="card info" />
+      <img src={img}  />
       <h1>{title}</h1>
       <p>{description}</p>
     </span>
